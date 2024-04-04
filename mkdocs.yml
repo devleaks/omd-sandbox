@@ -8,11 +8,12 @@
 #
 site_name: Obsidian MkDocs Test Site
 
+site_description: Test site for Obsidian + Mkdocs + Dracula (OMD) template
+
 site_url: https://devleaks.github.io/omd-sandbox
 repo_url: https://github.com/devleaks/omd-sandbox
 edit_uri: tree/master/docs/
 
-site_description: Test site for Obsidian + Mkdocs + Dracula (OMD) template
 copyright: Copyright &copy; 2024 <a href="https://github.com/devleaks"  target="_blank" rel="noopener">Pierre M</a>
 
 # ###############################################

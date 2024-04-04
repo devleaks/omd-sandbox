@@ -2,11 +2,11 @@ class Person:
     """A class to represent a person.
 
     Attributes:
-        name : str
+        name str:
             first name of the person
-        surname : str
+        surname str:
             family name of the person
-        age : int
+        age int:
             age of the person
 
     Methods:
@@ -14,7 +14,7 @@ class Person:
             Prints the person's name and age.
     """
 
-    def __init__(self, name: str, surname: str, age: int):
+    def __init__(self, name: str, surname: str, age: int) -> None:
         """Constructs all the necessary attributes for the person object.
 
         A person object.
@@ -23,9 +23,6 @@ class Person:
             name: first name of the person
             surname: family name of the person
             age: age of the person
-
-        Returns:
-            None
         """
 
         self.name = name
@@ -35,13 +32,10 @@ class Person:
     def info(self, additional: str = ""):
         """Prints the person's name and age.
 
-        If the argument 'additional' is passed, then it is appended after the main info.
+        If the argument additional is passed, then it is appended after the main info.
 
         Args:
-            additional, optional: More info to be displayed (default is None) (default: `""`)
-
-        Returns:
-            None
+            additional: More info to be displayed (optional, default is None)
         """
 
         print(

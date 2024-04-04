@@ -9,13 +9,13 @@ def factorial(n: int) -> int:
         n: number to factor, must be an non negative integer value.
 
     Raises:
-        ValueError: is not a positive integer
+        ValueError: supplied argument is not zero or or a positive integer.
 
     Returns:
         factorial of supplied integer argument.
 
     Warning:
-        Value can become quite large quickly.
+        Value can quickly become quite large.
 
     Examples:
         ```python
