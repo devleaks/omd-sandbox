@@ -18,15 +18,13 @@ edit_uri: tree/master/docs/
 site_description: Template for Obsidian + mkdocs + dracula
 copyright: Copyright &copy; 2024 <a href="https://github.com/devleaks"  target="_blank" rel="noopener">Pierre M</a>
 
-docs_dir: docs/src
-
 # ###############################################
 #
 # Theme and colors
 #
 theme:
   name: material
-  custom_dir: docs/theme
+  custom_dir: docs/.theme
   palette:
     # Dark mode
     - media: "(prefers-color-scheme: dark)"
