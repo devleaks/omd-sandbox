@@ -94,7 +94,8 @@ markdown_extensions:
       preserve_tabs: true
       custom_fences:
         # Mermaid diagrams
-        - name: diagram
+        # Please recall that fence must match Obsidian mermaid plugin
+        - name: mermaid
           class: diagram
           format: !!python/name:pymdownx.superfences.fence_code_format
             # - name: math
@@ -106,11 +107,15 @@ markdown_extensions:
             #   format: !!python/name:tools.pymdownx_md_render.md_sub_render
 
             # Vega Lite charts
+            #
+            # Please recall that fence must match Vega/Vega-Lite Obsidian
+            # plugin https://github.com/Justin-J-K/obsidian-vega
+            # (In above Obsidian plugin, fences cannot be changed.)
 
 
-        - name: vegalite
+        - name: vega-lite
           class: vegalite
-          format: !!python/name:mkdocs_charts_plugin.fences.fence_vegalite # Vegalight charts
+          format: !!python/name:mkdocs_charts_plugin.fences.fence_vegalite # Vega-Lite charts
 
 
         - name: vega

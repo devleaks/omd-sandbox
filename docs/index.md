@@ -1,10 +1,18 @@
 ---
-title: Obsidian Mkdocs Template
+title: Obsidian Mkdocs Dracula Test Site
 date: 2024
-tags: [mkdocs,mkdocstrings,python,material,dracula,obsidian,pygments,template]
+tags:
+  - mkdocs
+  - mkdocstrings
+  - python
+  - material
+  - dracula
+  - obsidian
+  - pygments
+  - template
 ---
 
-# Test page
+# Test Page
 
 
 # Header 1
@@ -29,21 +37,36 @@ Lorem ipsum
 
 ###### Header 6
 
-Texte normal, ==en évidence==, **gras**, ~~barré~~, ou _italique_.
+Content Tabs
 
-**Bold text and _nested italic_ text**. ***Bold and italic, who wins?***
+=== "Display"
+
+    Texte normal, ==en évidence==, **gras**, ~~barré~~, ou _italique_.
+    **Bold text and _nested italic_ text**.
+    __Bold text and *nested italic, ==who== wins?*__
+
+=== "Markdown"
+
+    ```
+      Texte normal, ==en évidence==, **gras**, ~~barré~~, ou _italique_.
+      **Bold text and _nested italic_ text**.
+      __Bold text and *nested italic, ==who== wins?*__
+    ```
+
+
+
 
 
 # Code
 
-Et `litéral` dans le texte...
+Et `litéral` dans le texte…
 
 ```python
 def factorial(n: int) -> int:
     """Compute factorial (!) of an integer number
 
        Raises:
-           ValueError is not a positive integer
+           ValueError: argument is not non negative integer
     """
     if not isinstance(n, int) or n < 0:
         print("not non negative integer")
@@ -54,31 +77,51 @@ def factorial(n: int) -> int:
 
 # Callouts
 
-> [!info] Callout
+## Obsidian Style
 
+> [!info] Callout
 
 > [!warning] Warning: Lorem Ipsum
 
 
-This is not properly displayed in Obsidian...
+## Py-Mdown Style
 
-/// danger | Reminder
+> [!warning] This is not properly displayed in Obsidian…
+
+/// admonition | A Title
+    type: info
 Please read the [airport](airport.md) for information on extension compatibility and general notes to be
 aware of when using these extensions.
 ///
 
+/// warning | Reminder
+Shortcut to define the admonition type.
+///
 
-# Definition lists
 
-Les listes de définitions sont pratiques pour éénumérer les options en les décrivant:
+## Mkdocs Material Style
+
+> [!warning] This is not properly displayed in Obsidian…
+
+!!! danger "Warning message goes here"
+    Please read the [airport](airport.md) for information on extension compatibility and general notes to be
+    aware of when using these extensions.
+
+
+# Definition Lists
+
+Les listes de définitions sont pratiques pour énumérer les options en les décrivant:
 
 `élément`
-:   la définition suit
+:   La définition suit
     Pour les descriptions, etc.
     Curieux de voir le résultat.
 
-`autre définition`
-:   autre description.
+autre définition
+:   Autre description. le terme n'est pas nécessairement mis en évidence.
+
+*autre définition*
+:   Autre description. le terme peut être mis en évidence de plusieurs façons.
 
 
 # Diagrams
@@ -87,7 +130,7 @@ Les listes de définitions sont pratiques pour éénumérer les options en les d
 
 Sample Gantt diagram
 
-```diagram
+```mermaid
 %%{init: 
 {
     'theme': 'base',
@@ -119,7 +162,7 @@ gantt
 
 ### Simpler Chart (Vega Lite)
 
-```vegalite
+```vega-lite
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "description": "A simple bar chart with embedded data.",

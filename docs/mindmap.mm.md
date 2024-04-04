@@ -1,4 +1,4 @@
-# emitpy mindmap
+# Emitpy Mindmap
 
 # Aeroport
 - Ramps

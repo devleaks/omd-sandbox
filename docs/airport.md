@@ -1,7 +1,9 @@
 ---
-title: Old structure of class hierarchy
+title: Class hierarchy
 date: 2019
-tags: [aero,legacy]
+tags:
+  - aero
+  - legacy
 ---
 
 # Class Hierarchy
