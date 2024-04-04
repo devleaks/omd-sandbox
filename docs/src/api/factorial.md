@@ -1,0 +1,3 @@
+# Mathematics — API
+
+::: mathematics.factorial

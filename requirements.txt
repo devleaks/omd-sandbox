@@ -1,0 +1,9 @@
+mkdocs
+pymdown-extensions
+mkdocs-material
+mkdocs-charts-plugin
+mkdocs-markmap
+mkdocs-roamlinks-plugin
+mkdocs-callouts
+mkdocs-git-revision-date-localized-plugin
+mkdocstrings[python]

@@ -1,0 +1,249 @@
+# ###############################################
+#
+# Obsidian MkDocs Template
+#
+# Template incldues a few demo/test files
+# that exhibit all features.
+#
+# ###############################################
+#
+# Site
+#
+site_name: Obsidian MkDocs Template
+
+site_url: https://devleaks.github.io/omd-template
+repo_url: https://github.com/devleaks/omd-template
+edit_uri: tree/master/docs/
+
+site_description: Template for Obsidian + mkdocs + dracula
+copyright: Copyright &copy; 2024 <a href="https://github.com/devleaks"  target="_blank" rel="noopener">Pierre M</a>
+
+docs_dir: docs/src
+
+# ###############################################
+#
+# Theme and colors
+#
+theme:
+  name: material
+  custom_dir: docs/theme
+  palette:
+    # Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: dracula
+      primary: purple
+      accent: orange
+  font: false
+#
+# Dracula is a dark theme only. Dracula can't stand the light.
+#
+# ###############################################
+#
+# Navigation, headings
+#
+nav:
+  - Welcome: index.md
+  - Mindmap: airport.md
+  - API:
+      - Code: api/factorial.md
+      - Class: api/person.md
+
+# ###############################################
+#
+# Plugins
+#
+plugins:
+  - search
+  - roamlinks
+  - callouts
+  - charts
+  - tags
+  - markmap:
+      base_path: docs
+      encoding: utf-8
+      file_extension: .mm.md
+  - git-revision-date-localized:
+      fallback_to_build_date: true
+  - mkdocstrings:
+      handlers:
+        python:
+          paths: ["src"]
+          options:
+            show_source: false
+
+# ###############################################
+#
+# Extensions
+#
+# Note: Some extensions have been commented out because unused.
+#       Restoring some extension may require added appropriate
+#       python package.
+#
+markdown_extensions:
+  - nl2br
+  - markdown.extensions.toc:
+      slugify: !!python/object/apply:pymdownx.slugs.slugify { kwds: { case: lower } }
+      permalink: ""
+  - markdown.extensions.admonition:
+  - markdown.extensions.smarty:
+      smart_quotes: false
+  - pymdownx.betterem:
+  - markdown.extensions.attr_list:
+  - markdown.extensions.def_list:
+  - markdown.extensions.tables:
+  - markdown.extensions.abbr:
+  - markdown.extensions.footnotes:
+  - markdown.extensions.md_in_html:
+  - pymdownx.superfences:
+      preserve_tabs: true
+      custom_fences:
+        # Mermaid diagrams
+        - name: diagram
+          class: diagram
+          format: !!python/name:pymdownx.superfences.fence_code_format
+            # - name: math
+            #   class: arithmatex
+            #   format:
+            #     !!python/object/apply:pymdownx.arithmatex.arithmatex_fenced_format { kwds: { mode: generic, tag: pre } }
+            # - name: md-render
+            #   class: md-render
+            #   format: !!python/name:tools.pymdownx_md_render.md_sub_render
+
+            # Vega Lite charts
+
+
+        - name: vegalite
+          class: vegalite
+          format: !!python/name:mkdocs_charts_plugin.fences.fence_vegalite # Vegalight charts
+
+
+        - name: vega
+          class: vegalite
+          format: !!python/name:mkdocs_charts_plugin.fences.fence_vegalite # Vega charts
+
+
+  - pymdownx.highlight:
+      extend_pygments_lang:
+        - name: js
+          lang: js
+        - name: pycon3
+          lang: pycon
+          options:
+            python3: true
+      linenums_style: pymdownx-inline
+  - pymdownx.inlinehilite:
+      custom_inline:
+        - name: math
+          class: arithmatex
+          format: !!python/object/apply:pymdownx.arithmatex.arithmatex_inline_format { kwds: { mode: generic } }
+  - pymdownx.magiclink:
+      repo_url_shortener: true
+      repo_url_shorthand: true
+      social_url_shorthand: true
+      social_url_shortener: true
+      user: facelessuser
+      repo: pymdown-extensions
+      normalize_issue_symbols: true
+  - pymdownx.tilde:
+  - pymdownx.caret:
+  - pymdownx.smartsymbols:
+  # - pymdownx.emoji:
+  #     emoji_index: !!python/name:material.extensions.emoji.twemoji
+  #     emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.escapeall:
+      hardbreak: True
+      nbsp: True
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.progressbar:
+  # - pymdownx.arithmatex:
+  #     generic: true
+  #     block_tag: "pre"
+  - pymdownx.mark:
+  - pymdownx.striphtml:
+  # - pymdownx.snippets:
+  #     base_path:
+  #       - docs/src/markdown/.snippets
+  #       - LICENSE.md
+  #       - SECURITY.md
+  #     auto_append:
+  #       - refs.md
+  #     check_paths: true
+  # - pymdownx.keys:
+  #     separator: "\uff0b"
+  - pymdownx.details:
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.saneheaders:
+  - pymdownx.blocks.admonition:
+      types:
+        - new
+        - settings
+        - note
+        - abstract
+        - info
+        - tip
+        - success
+        - question
+        - warning
+        - failure
+        - danger
+        - bug
+        - example
+        - quote
+  - pymdownx.blocks.details:
+      types:
+        - name: details-new
+          class: new
+        - name: details-settings
+          class: settings
+        - name: details-note
+          class: note
+        - name: details-abstract
+          class: abstract
+        - name: details-info
+          class: info
+        - name: details-tip
+          class: tip
+        - name: details-success
+          class: success
+        - name: details-question
+          class: question
+        - name: details-warning
+          class: warning
+        - name: details-failure
+          class: failure
+        - name: details-danger
+          class: danger
+        - name: details-bug
+          class: bug
+        - name: details-example
+          class: example
+        - name: details-quote
+          class: quote
+  - pymdownx.blocks.html:
+  - pymdownx.blocks.definition:
+  - pymdownx.blocks.tab:
+      alternate_style: True
+      combine_header_slug: True
+      slugify: !!python/object/apply:pymdownx.slugs.slugify { kwds: { case: lower } }
+  # - tools.collapse_code:
+  #     expand_text: ""
+  #     collapse_text: ""
+
+# ###############################################
+#
+# Extras
+#
+extra_javascript:
+  - assets/js/extra-loader.js
+  - assets/js/material-extra-3rdparty.js
+  - assets/js/material-extra-theme.js
+  - https://unpkg.com/mermaid/dist/mermaid.min.js
+  - https://cdn.jsdelivr.net/npm/vega@5
+  - https://cdn.jsdelivr.net/npm/vega-lite@5
+  - https://cdn.jsdelivr.net/npm/vega-embed@6
+
+extra_css:
+  - assets/css/extra.css
+  - assets/css/dracula-colors.css

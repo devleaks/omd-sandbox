@@ -1,0 +1,5 @@
+# People
+
+## Person
+
+::: people.person
