@@ -1,21 +1,18 @@
 # ###############################################
 #
-# Obsidian MkDocs Template
-#
-# Template incldues a few demo/test files
-# that exhibit all features.
+# Obsidian MkDocs Test Site
 #
 # ###############################################
 #
 # Site
 #
-site_name: Obsidian MkDocs Template
+site_name: Obsidian MkDocs Test Site
 
-site_url: https://devleaks.github.io/omd-template
-repo_url: https://github.com/devleaks/omd-template
+site_url: https://devleaks.github.io/omd-sandbox
+repo_url: https://github.com/devleaks/omd-sandbox
 edit_uri: tree/master/docs/
 
-site_description: Template for Obsidian + mkdocs + dracula
+site_description: Test site for Obsidian + Mkdocs + Dracula (OMD) template
 copyright: Copyright &copy; 2024 <a href="https://github.com/devleaks"  target="_blank" rel="noopener">Pierre M</a>
 
 # ###############################################
